@@ -1,7 +1,7 @@
 autolayout-helper-swift
 =======================
 
-A lightweight UIView extension providing helper methods for creating and adding iOS Auto Layout constraints programatically.
+A lightweight UIView extension providing helper methods for creating / adding NSLayoutConstraint objects programatically.
 
 ### Instructions
 - Add the UIView+LayoutHelper.swift file to your Xcode project
