@@ -1,13 +1,13 @@
-autolayout-helper-swift
+UIView+Layout
 =======================
 
 A lightweight UIView extension providing helper methods for creating / adding NSLayoutConstraint objects programatically.
 
 ### Instructions
-- Add the UIView+LayoutHelper.swift file to your Xcode project
+- Add the single file UIView+LayoutHelper.swift file to your Xcode project
 
 ### Usage
-
+- 
 #### Adding constraints
 
 For example to relate a label's left, right, top and bottom to its superview with some offsets
@@ -33,6 +33,11 @@ Each method returns the NSLayoutConstraint object that it adds e.g. so that you 
       heightConstraint = self.customView.addHeightConstraint(relation: .Equal, constant: 150.0)
 
 (where heightConstraint is a local or instance variable)
+
+### TODO:
+- Document public methods
+- Add unit tests to public methods
+- More sample project use cases
 
 ### Screenshots
 
