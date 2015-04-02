@@ -1,4 +1,4 @@
-UIView+Layout
+UIView AutoLayout Helper
 =======================
 
 A lightweight UIView extension providing helper methods for creating / adding NSLayoutConstraint objects programatically.
