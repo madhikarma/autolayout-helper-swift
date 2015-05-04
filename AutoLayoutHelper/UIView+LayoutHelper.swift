@@ -201,7 +201,7 @@ extension UIView {
             item: self,
             attribute: attr1,
             relatedBy: relation,
-            toItem: toView?,
+            toItem: toView,
             attribute: attr2,
             multiplier: 1.0,
             constant: constant)
