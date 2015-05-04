@@ -10,13 +10,21 @@ import Foundation
 import UIKit
 
 /**
-Extension of UIView for AutoLayout helper methods
+*  Extension of UIView for AutoLayout helper methods
 */
 extension UIView {
     
     
-    // Mark: - Fill
+    // MARK: - Fill
     
+    /**
+    Creates top, left, bottom and right constraints and adds them to the superview.
+    
+    @discussion fddfs
+    :param: edges The insets to apply to the top, left, bottom and right constriant
+    
+    :returns: An array of NSLayoutConstraing objects (top left, bottom, right)
+    */
     func fillSuperView(edges: UIEdgeInsets) -> [NSLayoutConstraint] {
         
         var topConstraint: NSLayoutConstraint = self.addTopConstraint(toView: self.superview, relation: .Equal, constant: edges.top)
@@ -30,6 +38,16 @@ extension UIView {
     
     // MARK: - Left Constraints
     
+    /**
+    <#Description#>
+    
+    :param: view      <#view description#>
+    :param: attribute <#attribute description#>
+    :param: relation  <#relation description#>
+    :param: constant  <#constant description#>
+    
+    :returns: <#return value description#>
+    */
     func addLeftConstraint(toView view: UIView?, attribute: NSLayoutAttribute, relation: NSLayoutRelation, constant: CGFloat) -> NSLayoutConstraint {
         
         let constraint: NSLayoutConstraint = self.createConstraint(attribute: .Left, toView: view, attribute: attribute, relation: relation, constant: constant)

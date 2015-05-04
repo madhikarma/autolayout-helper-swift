@@ -24,6 +24,8 @@ class DemoViewController: UIViewController {
         self.label?.textAlignment = NSTextAlignment.Center
         self.label?.backgroundColor = UIColor.redColor()
         self.view.addSubview(self.label!)
+        
+        self.label?.fillSup
         self.label?.addCenterYConstraint(toView: self.label?.superview)
         self.label?.addLeftConstraint(toView: self.label?.superview, relation: .Equal, constant: kMargin)
         self.label?.addRightConstraint(toView: self.label?.superview, relation: .Equal, constant: -kMargin)
