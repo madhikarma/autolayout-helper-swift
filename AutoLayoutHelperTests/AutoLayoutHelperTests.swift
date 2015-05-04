@@ -11,9 +11,8 @@ import XCTest
 
 class AutoLayoutHelperTests: XCTestCase {
     
-    var mockView: UIView = UIView(frame: CGRectZero)
-    var mockViewSuperview: UIView = UIView(frame: CGRectZero)
-
+    var mockView: UIView!
+    var mockViewSuperview: UIView!
     var leftConstraint: NSLayoutConstraint?
 
     
@@ -24,12 +23,9 @@ class AutoLayoutHelperTests: XCTestCase {
         super.setUp()
         
         // Given
-
+        self.mockView = UIView(frame: CGRectZero)
+        self.mockViewSuperview = UIView(frame: CGRectZero)
         self.mockViewSuperview.addSubview(mockView)
-
-        // When
-        
-        self.leftConstraint = mockView.addLeftConstraint(toView: mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
     }
     
     override func tearDown() {
@@ -45,19 +41,19 @@ class AutoLayoutHelperTests: XCTestCase {
     
     func testAddLeftConstraint_CreatesConstraint() {
         
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
+        
         // Then
-        
-        // creates constraint
-        
         XCTAssertNotNil(self.leftConstraint, "Error: expected leftConstraint not to be nil but instead it is")
     }
     
     func testAddLeftConstraint_AddsConstraint() {
         
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
+        
         // Then
-        
-        // superview contains constraint
-        
         var expectedResult: Bool = true
         var actualResult: Bool = ((self.mockViewSuperview.constraints() as! [NSLayoutConstraint]).filter({$0 == self.leftConstraint!}).count == 1)
         
@@ -66,10 +62,10 @@ class AutoLayoutHelperTests: XCTestCase {
 
     func testAddLeftConstraint_CreatesAndAddsCorrectNumberOfConstraint() {
         
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
+        
         // Then
-        
-        // number of constraints
-        
         var expectedResult: Int = 1
         var actualResult: Int = mockViewSuperview.constraints().count
         
@@ -78,22 +74,23 @@ class AutoLayoutHelperTests: XCTestCase {
     
     func testAddLeftConstraint_CreatesAndAddsConstraintWithCorrectFirstItem() {
 
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
+        
         // Then
-        
-        // constraint firstView is correct
-        
         var expectedResult: UIView = self.mockView
-        var actualResult: UIView = leftConstraint!.firstItem as! UIView
         
+        var actualResult: UIView = leftConstraint!.firstItem as! UIView
+
         XCTAssertEqual(expectedResult, actualResult, "Error: expected leftConstraint firstItem to be the mockView but instead it is \(actualResult)")
     }
     
     func testAddLeftConstraint_CreatesAndAddsConstraintWithCorrectFirstAttribute() {
 
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
+        
         // Then
-        
-        // constraint firstAttribute is correct
-        
         var expectedResult: NSLayoutAttribute = .Left
         var actualResult: NSLayoutAttribute = self.leftConstraint!.firstAttribute
         
@@ -101,10 +98,11 @@ class AutoLayoutHelperTests: XCTestCase {
     }
   
     func testAddLeftConstraint_CreatesAndAddsConstraintWithCorrectSecondItem() {
-        // And
         
-        // constraint secondView is correct
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
         
+        // Then
         var expectedResult: UIView = mockViewSuperview
         var actualResult: UIView = leftConstraint!.secondItem as! UIView
         
@@ -113,10 +111,10 @@ class AutoLayoutHelperTests: XCTestCase {
     
     func testAddLeftConstraint_CreatesAndAddsConstraintWithCorrectSecondAttribute() {
       
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
+        
         // Then
-        
-        // constraint secondView is correct
-        
         var expectedResult: NSLayoutAttribute = .Right
         var actualResult: NSLayoutAttribute = leftConstraint!.secondAttribute
         
@@ -125,22 +123,22 @@ class AutoLayoutHelperTests: XCTestCase {
     
     func testAddLeftConstraint_CreatesAndAddsConstraintWithCorrectRelation() {
 
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
+        
         // Then
-        
-        // constraint relation is correct
-        
         var expectedResult: NSLayoutRelation = .Equal
         var actualResult: NSLayoutRelation = leftConstraint!.relation
         
         XCTAssertEqual(expectedResult, actualResult, "Error: expected leftConstraint relation to be \(expectedResult) but instead it is \(actualResult)")
     }
     
-    func testAddLeftConstraint_CreatesAndAddsConstraintWithCorrectConstraint() {
+    func testAddLeftConstraint_CreatesAndAddsConstraintWithCorrectConstant() {
+       
+        // When
+        self.leftConstraint = self.mockView.addLeftConstraint(toView: self.mockViewSuperview, attribute: .Right, relation: .Equal, constant: 0.0);
         
         // Then
-        
-        // constraint relation is correct
-        
         var expectedResult: CGFloat = 10.0
         var actualResult: CGFloat = leftConstraint!.constant
         
