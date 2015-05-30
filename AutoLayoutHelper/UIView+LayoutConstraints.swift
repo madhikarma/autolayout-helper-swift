@@ -1,5 +1,5 @@
 //
-//  UIView+LayoutHelper.swift
+//  UIView+LayoutConstraints.swift
 //
 //
 //  Created by Shagun Madhikarmi on 09/10/2014.
