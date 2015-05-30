@@ -10,16 +10,13 @@ import Foundation
 import UIKit
 
 /**
-*  Extension of UIView for AutoLayout helper methods
-*/
-
-/**
-*  Extension of UIView to help create and add NSLayoutConstraint
+*  Extension of UIView to help create and add common NSLayoutConstraint relation instances
 */
 extension UIView {
     
+    // MARK: - Constraints
     
-    // MARK: - Fill
+    // MARK: Fill
     
     /**
     Creates and adds an array of NSLayoutConstraint objects that relates this view's top, left, bottom and right to its superview (given an optional UIEdgeInsets for each side)
@@ -28,7 +25,7 @@ extension UIView {
     
     :param: edges An amount insets to apply to the top, left, bottom and right constraint
     
-    :returns: An array of 4 x NSLayoutConstraint objects (top, left, bottom , right) if the superview exists otherwise an empty array
+    :returns: An array of 4 x NSLayoutConstraint objects (top, left, bottom , right) if the superview exists (otherwise an empty array)
     */
     func fillSuperView(edges: UIEdgeInsets) -> [NSLayoutConstraint] {
         
@@ -48,7 +45,7 @@ extension UIView {
     }
     
     
-    // MARK: - Left Constraints
+    // MARK: Left
 
     /**
     Creates and adds an NSLayoutConstraint that relates this view's left to the left of another view.
@@ -65,7 +62,6 @@ extension UIView {
         
         return self.addLeftConstraint(toView: view, attribute: .Left, relation: relation, constant: constant)
     }
-    
     
     /**
     Creates and adds an NSLayoutConstraint that relates this view's left to some specified edge of another view.
@@ -88,7 +84,7 @@ extension UIView {
     }
     
     
-    // MARK: - Right Constraints
+    // MARK: Right
     
     /**
     Creates and adds an NSLayoutConstraint that relates this view's right to the right of another view.
@@ -127,7 +123,7 @@ extension UIView {
     }
     
     
-    // MARK: - Top Constraints
+    // MARK: Top
     
     /**
     Creates and adds an NSLayoutConstraint that relates this view's top to the top of another view.
@@ -166,7 +162,7 @@ extension UIView {
     }
 
     
-    // MARK: - Bottom Constraint
+    // MARK: Bottom
     
     /**
     Creates and adds an NSLayoutConstraint that relates this view's bottom to the bottom edge of another view
@@ -205,7 +201,7 @@ extension UIView {
     }
     
     
-    // MARK: - Center X Constraint
+    // MARK: Center X
     
     /**
     Creates and adds an NSLayoutConstraint that relates this view's centerX coordinate to centerX coordinate of another view.
@@ -250,7 +246,7 @@ extension UIView {
     }
     
     
-    // MARK: - Center Y Constraint
+    // MARK: Center Y
     
     /**
     Creates and adds an NSLayoutConstraint that relates this view's center Y coordinate to the center Y coordinate of another view, given a relation and offset
@@ -295,7 +291,7 @@ extension UIView {
     }
     
     
-    // MARK: - Width Constraints
+    // MARK: Width
     
     /**
     Creates and adds an NSLayoutConstraint that relates this view's width to the width of another view, given a relation and offset
@@ -328,7 +324,7 @@ extension UIView {
     }
     
     
-    // MARK: - Height Constraints
+    // MARK: Height
     
     /**
     Creates and adds an NSLayoutConstraint that relates this view's height to the height of another view, given a relation and offset
