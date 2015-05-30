@@ -64,19 +64,18 @@ e.g.
 (where heightConstraint is a local or instance variable)
 
 ### TODO:
-- [] Document public methods
-- [] Add unit tests to addLeft... methods
-- [] Add unit tests to addRight... methods
-- [] Add unit tests to addTop... methods
-- [] Add unit tests to addBottom... methods
-- [] Add unit tests to addCenterX... methods
-- [] Add unit tests to addCenterY... methods
-- [] Add unit tests to addWidth... methods
-- [] Add unit tests to addHeight... methods
+- [X] Document public methods
+- [ ] Unit tests
+ - [ ] addLeft... methods
+ - [ ] addRight... methods
+ - [ ] addTop... methods
+ - [ ] addBottom... methods
+ - [ ] addCenterX... methods
+ - [ ] addCenterY... methods
+ - [ ] addWidth... methods
+ - [ ] addHeight... methods
+- [ ] Make into a Swift Framework project for iOS 8+
 
-### Screenshots
-
-![Alt text](screen1.png "Optional title")
 
 ### Team
 * Development: [Shagun Madhikarmi](mailto:shagun@ustwo.com?subject=autolayout-helper), [Daniela Dias](mailto:daniela@ustwo.com?subject=autolayout-helper)
