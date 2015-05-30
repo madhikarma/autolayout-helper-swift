@@ -30,11 +30,12 @@ or error prone e.g. (using Visual Format Language):
 We can make adding NSLayoutConstraint relations into some common reusable methods that you call on any UIView you're trying to relate (via an Extension). This extension means you can relate a view you have create to another in a way that looks like its part of its setup and helps ensure we keep the NSLayoutConstraint creation code as DRY as possible.
 
 ### Setup
+
 - Add the UIView+LayoutConstraints.swift file to your project. That's it!
-- 
+
 ### Usage
 
-#### Adding constraints
+#### Adding Constraints
 
 For example using this extension then to relate a label's left, right, top and bottom to its superview with some offsets you can now write:
 
@@ -52,7 +53,7 @@ Or to center a view in both X and Y to its superview
         self.someView.addCenterXConstraint(toView: self.someView.superview, relation: .Equal, constant: 0)
         self.someView.addCenterYConstraint(toView: self.someView.superview, relation: .Equal, constant: 0)
 
-#### Modifying the Constraints
+#### Modifying Constraints
 
 Each method returns the NSLayoutConstraint object that it creates and adds so that you can store or modify it  
 
