@@ -5,9 +5,8 @@ UIView extension to ease creating Auto Layout Constraints
 
 ### The Problem
 
-#### Relating UIView's using Auto Layout programatically can either be quite verbose:
+Relating UIView's using Auto Layout programatically can either be quite verbose e.g. 
 
-e.g. 
         let leftConstraint: NSLayoutConstraint = NSLayoutConstraint(item: self.label, attribute: .Left, relatedBy: .Equal, toItem: self.label.superview, attribute: .Left, multiplier: 1.0, constant: 10.0)
         self.label.superview.addConstraint(leftConstraint)
         
@@ -20,7 +19,7 @@ e.g.
         let bottomConstraint: NSLayoutConstraint = NSLayoutConstraint(item: self.label, attribute: .Bottom, relatedBy: .Equal, toItem: self.label.superview, attribute: .Bottom, multiplier: 1.0, constant: -10.0)
         self.label.superview.addConstraint(bottomConstraint)
 
-or quite error prone (using Visual Format Language):
+or error prone e.g. (using Visual Format Language):
 
         var views = NSDictionaryOfVariableBindings(_label);
         self.label.superview.addConstraints(NSLayoutConstraint constraintsWithVisualFormat:@"V:|_label|" options:0 metrics:nil views:views]
@@ -28,7 +27,7 @@ or quite error prone (using Visual Format Language):
 
 ### A Solution
 
-We can make adding NSLayoutConstraint relations into some common reusable methods that you call on any UIView you're trying to relate (via an Extension) and ensure we keep the code as DRY as possible.
+We can make adding NSLayoutConstraint relations into some common reusable methods that you call on any UIView you're trying to relate (via an Extension). This extension means you can relate a view you have create to another in a way that looks like its part of its setup and helps ensure we keep the NSLayoutConstraint creation code as DRY as possible.
 
 ### Setup
 - Add the UIView+LayoutConstraints.swift file to your project. That's it!
