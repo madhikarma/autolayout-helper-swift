@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /**
-*  Extension of UIView to help create and add common NSLayoutConstraint relation instances
+*  UIView extension to ease creating Auto Layout Constraints
 */
 extension UIView {
     

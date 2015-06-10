@@ -12,7 +12,7 @@
 		AA55721C19FCE290003A1473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA55721A19FCE290003A1473 /* Main.storyboard */; };
 		AA55721E19FCE290003A1473 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA55721D19FCE290003A1473 /* Images.xcassets */; };
 		AA55722119FCE290003A1473 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA55721F19FCE290003A1473 /* LaunchScreen.xib */; };
-		AA55722D19FCE290003A1473 /* AutoLayoutHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55722C19FCE290003A1473 /* AutoLayoutHelperTests.swift */; };
+		AA55722D19FCE290003A1473 /* UIView+LayoutConstraintsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55722C19FCE290003A1473 /* UIView+LayoutConstraintsTestCase.swift */; };
 		AA55723719FCE2A3003A1473 /* UIView+LayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55723619FCE2A3003A1473 /* UIView+LayoutConstraints.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 		AA55722019FCE290003A1473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AA55722619FCE290003A1473 /* AutoLayoutHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA55722B19FCE290003A1473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA55722C19FCE290003A1473 /* AutoLayoutHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutHelperTests.swift; sourceTree = "<group>"; };
+		AA55722C19FCE290003A1473 /* UIView+LayoutConstraintsTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutConstraintsTestCase.swift"; sourceTree = "<group>"; };
 		AA55723619FCE2A3003A1473 /* UIView+LayoutConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutConstraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +99,7 @@
 		AA55722919FCE290003A1473 /* AutoLayoutHelperTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA55722C19FCE290003A1473 /* AutoLayoutHelperTests.swift */,
+				AA55722C19FCE290003A1473 /* UIView+LayoutConstraintsTestCase.swift */,
 				AA55722A19FCE290003A1473 /* Supporting Files */,
 			);
 			path = AutoLayoutHelperTests;
@@ -223,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93029DB21AF7EDC60090D0A5 /* UIView+LayoutConstraints.swift in Sources */,
-				AA55722D19FCE290003A1473 /* AutoLayoutHelperTests.swift in Sources */,
+				AA55722D19FCE290003A1473 /* UIView+LayoutConstraintsTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
